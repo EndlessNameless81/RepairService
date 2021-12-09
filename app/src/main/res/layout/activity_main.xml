@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/artboard_7col"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/backGround"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    //NOTEBOOK
+
+    <ImageButton
+        android:id="@+id/imageButtonNotebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="5dp"
+
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonMediapad"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonSmartphone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/artboard_1col" />
+
+    //SMARTPHONE
+    <ImageButton
+        android:id="@+id/imageButtonSmartphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonComputer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonNotebook"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/artboard_2col" />
+
+    //MEDIAPAD
+    <ImageButton
+        android:id="@+id/imageButtonMediapad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonPrinter"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonComputer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonNotebook"
+        app:srcCompat="@drawable/artboard_3col" />
+
+    //COMPUTER
+    <ImageButton
+        android:id="@+id/imageButtonComputer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonRoute"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonMediapad"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonSmartphone"
+        app:srcCompat="@drawable/artboard_4col" />
+
+    //PRINTER
+    <ImageButton
+        android:id="@+id/imageButtonPrinter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="150dp"
+        android:background="@null"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonRoute"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonMediapad"
+        app:srcCompat="@drawable/artboard_5col" />
+
+    //ROUTE
+
+    <ImageButton
+        android:id="@+id/imageButtonRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="150dp"
+
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonPrinter"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonComputer"
+        app:srcCompat="@drawable/artboard_6col" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

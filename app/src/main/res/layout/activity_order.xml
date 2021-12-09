@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/artboard_7col"
+    tools:context=".OrderActivity">
+
+
+    //Text
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/courier_new"
+                android:text="Order info"
+                android:textSize="14sp"></TextView>
+
+            <EditText
+                android:id="@+id/EditTextPersonName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/courier_new"
+                android:hint="Enter you name"
+                android:inputType="textPersonName"></EditText>
+
+            <EditText
+                android:id="@+id/EditTextEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/courier_new"
+                android:hint="Enter you e-mail"
+                android:inputType="textEmailAddress"></EditText>
+
+            <EditText
+                android:id="@+id/EditTextPhone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/courier_new"
+
+
+                android:hint="Enter you number phone"
+                android:inputType="phone|number">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/EditTextAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/courier_new"
+                android:hint="Enter you postal address"
+                android:inputType="textPostalAddress"></EditText>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/courier_new"
+        android:text="Back"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCallService"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCallService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="50dp"
+        android:text="Call Service"
+        android:textSize="12dp"
+        android:fontFamily="@font/courier_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSendOrder"
+        app:layout_constraintStart_toEndOf="@+id/buttonBack" />
+
+    //SendButton
+
+    <Button
+        android:id="@+id/buttonSendOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/courier_new"
+        android:text="Send Order"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCallService" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
